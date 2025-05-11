@@ -1,0 +1,6 @@
+ <img src="../img/bicycle_travel.jpg" alt="Bike travel" style="width:100%; max-height: 400px; object-fit: cover; margin-bottom: 20px;">
+
+
+    <p class="video-disclaimer" style="font-size: 0.9em; color: #666; margin-top: 10px;">
+      <em>Disclaimer: This video is shared for informational and educational purposes only. All rights to the content belong to the original creator on YouTube.</em>
+    </p>

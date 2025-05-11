@@ -1,0 +1,339 @@
+* {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: url(img/green.jpg) no-repeat center center fixed; /* фиксируем фоновое изображение */
+  background-size: cover; /* растягиваем фон на весь экран */
+  color: #333;
+}
+
+
+/* Header */
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.logo img {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.main-nav a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: gold;
+  text-decoration: none;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  transition: 0.3s;
+}
+
+/* Adaptive */
+@media (max-width: 768px) {
+  .main-nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    transform: translateY(-200%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .main-nav.open {
+    transform: translateY(0);
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
+/*Basic styles*/
+
+.main-content {
+  flex: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0));
+  z-index: 1;
+}
+/*Contact form*/
+
+.contact-page {
+  min-height: 100vh;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+.contact-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 80px;
+  border-radius: 0;
+  background: rgba(255,255,255,0.15);
+  color: #000;
+  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+
+.contact-content h1 {
+  font-size: 36px;
+  font-family: "Space Grotesk", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+/* Adaptive */
+
+@media (max-width: 1200px) {
+  .contact-content {
+    max-width: 90%;
+    padding: 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-content {
+    max-width: 85%;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    max-width: 100%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-content {
+    padding: 15px;
+  }
+
+  .contact-content h1 {
+    font-size: 28px;
+  }
+
+  .contact-content p {
+    font-size: 14px;
+  }
+}
+/*details*/
+
+.about-content {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  color: #222;
+}
+
+.about-carta {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 2rem;
+}
+
+#carta {
+  padding: 2rem;
+  border-radius: 12px;
+  background: url(img/Stockholm.jpg) no-repeat center center;
+  background-size: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.615);
+  min-height: 350px;
+}
+
+
+
+/*footer*/
+
+.site-footer, .site-footer-guide {
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.site-footer {
+  background-color: #f0f0f0;
+  margin-top: auto;
+}
+
+.site-footer-guide {
+  background-color: #fff;
+}
+
+.footer-social {
+  margin-top: 10px;
+}
+
+.footer-social a {
+  margin: 0 10px;
+  display: inline-block;
+  color: #555;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social a:hover {
+  transform: scale(1.2);
+  color: #fc0;
+}
+
+.footer-social svg {
+  vertical-align: middle;
+  fill: currentColor;
+}
+/*Another styles*/
+
+.bio-section h1 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.bio-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.guide-page {
+  padding: 20px;
+}
+
+a {
+  color: #fc0;
+  text-decoration: none;
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  background-color: #fc0;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 8px;
+  filter: invert(1); /* Apply color inversion by default */
+  transition: filter 0.3s ease; /* Smooth transition for inversion */
+}
+
+.icon2 {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.icon:hover {
+  filter: invert(0); /* Invert colors on hover */
+}
+

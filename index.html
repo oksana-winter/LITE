@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <title>lite</title>
+    <link rel="stylesheet" href="stylesHome.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo-white.png" alt="LITE Logo" />
+        </a>
+      </div>
+    
+
+      <nav class="main-nav" id="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li> 
+          <li><a href="guide.html">Guide</a></li>       
+          <li><a href="generator.html">Generator</a></li>
+          <li><a href="hub.html">Hub</a></li>         
+          <li><a href="about.html">About</a></li>
+          <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+      </nav>      
+
+      <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <main class="hero">
+      <div class="video-bg">
+        <!-- Fallback picture -->
+        <img src="img/road.jpg" alt="Background" class="video-fallback" />
+    
+        <!-- video -->
+        <video autoplay loop muted playsinline poster="img/road.jpg">
+          <source src="video/couple-mountain.mp4" type="video/mp4">
+          loading...
+        </video>
+      </div>
+    
+      <div class="overlay"></div>
+    
+      <div class="hero-content">
+        <h1>LITE</h1>
+        <p>all about Minimalist Travel</p>
+      </div>
+    </main>
+    
+    
+
+    <script src="script.js"></script>
+    
+  </body>
+</html>

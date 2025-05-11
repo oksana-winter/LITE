@@ -1,0 +1,485 @@
+* {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.main-nav a:hover {
+  color: #ffd700; 
+  text-decoration: none; /*highlights*/
+}
+
+.main-nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: rgb(0, 0, 0);
+  transition: 0.3s;
+}
+
+/* Adaptive */
+@media (max-width: 768px) {
+  .main-nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    transform: translateY(-200%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .main-nav.open {
+    transform: translateY(0);
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* PICTURE BG HOME */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(13, 14, 14, 0.642); /* Colour of the text website */
+  overflow: hidden;
+
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Full height */
+  object-fit: cover; 
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* White gradient */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 148px;
+  margin-bottom: 10px;  /* Title */
+}
+
+.hero-content p {
+  font-size: 20px;
+}
+
+/*Contact page styles*/
+.contact-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* minimum height */
+  background-image: url('img/roads.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: flex-start; /* Align items to the top */
+  color: rgb(0, 0, 0);
+  margin-top: 1px; /* add margin to the top */
+}
+
+.contact-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* White gradient */
+}
+
+.contact-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 80px;
+  border-radius: 0px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1px; /* add margin to the bottom */
+}
+
+@media (max-width: 1200px) {
+  .contact-content {
+    max-width: 90%;
+    padding: 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-content {
+    max-width: 85%;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    max-width: 100%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-content {
+    padding: 15px;
+  }
+
+  .contact-content h1 {
+    font-size: 28px;
+  }
+
+  .contact-content p {
+    font-size: 14px;
+  }
+
+  form label {
+    font-size: 14px;
+  }
+
+  form input, form textarea {
+    font-size: 14px;
+  }
+
+  form button {
+    font-size: 14px;
+  }
+}
+
+
+.contact-content h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 36px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form label {
+  font-size: 16px;
+}
+
+/* Styles for form fields */
+form input, form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #646464; /* Bottom border */
+  background: transparent; /* Transparent background */
+  color: #000;
+  outline: none; /* Remove default focus outline */
+  transition: border-color 0.3s ease;
+}
+
+/* Change border color on hover or focus */
+form input:focus, form textarea:focus {
+  border-color: #ffcc00; /* Bright border on focus */
+}
+
+/* Change border color on hover */
+form input:hover, form textarea:hover {
+  border-color: #ffcc00; /* Bright border on hover */
+}
+
+
+
+form button {
+  padding: 10px;
+  font-size: 16px;
+  background-color:  #ffcc00;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #000000; 
+  color: rgb(255, 255, 255);
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  font-style: bold;
+  color: #222d3a;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+
+
+/*Guide page styles*/
+
+.guide-page {
+  padding: 20px;
+}
+
+.guide-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 50px;
+}
+
+.guide-item {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+
+.guide-item img {
+  height: 55%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.guide-item h2 {
+  font-size: 1.25rem;
+  margin: 15px;
+}
+
+.guide-item p {
+  font-size: 1rem;
+  margin: 0 15px 15px;
+}
+
+.guide-item a {
+  color: #376290;
+  text-decoration: none;
+}
+
+.guide-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 14px rgba(54, 54, 54, 0.4); /* highlights*/
+  background-color: #ffffff; /* highlights */
+}
+ 
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.pagination a:hover {
+  text-decoration: underline;
+}
+
+iframe {               /* Aspect ratio for responsive design for VIDEO */
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+
+/*Guide page styles END*/
+
+/*About*/
+
+.about-content {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  color: #222;
+}
+
+.bio-section h1,
+.extras-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.bio-section p,
+.extras-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.extras-section ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.extras-section li {
+  margin-bottom: 5px;
+}
+
+a {
+  color: #3a4d61;
+  text-decoration: none;
+}
+
+/* About styles */
+
+
+/* Footer styles */
+.site-footer {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.site-footer-guide {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.footer-social {
+  margin-top: 10px;
+}
+
+.footer-social a {
+  margin: 0 10px;
+  display: inline-block;
+  color: #555;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social a:hover {
+  transform: scale(1.2);
+  color: #ffcc00;
+}
+
+.footer-social svg {
+  vertical-align: middle;
+  fill: currentColor;
+}
+/* Footer styles END */
+
+
