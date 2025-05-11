@@ -1,3 +1,6 @@
+// NOT USEFUL: This file is not used in the final version of the project (GitHub doesn't support PHP), but it is included here for reference.
+
+
 <?php
 // Recipient settings
 $to = "your@email.com"; // ← replace with your email address
@@ -32,7 +35,9 @@ $body .= "Message:\n$message";
 $headers = "From: $email\r\nReply-To: $email\r\n";
 
 if (mail($to, $subject, $body, $headers)) {
-    echo "Message sent successfully.";
+        // SUCCESS: Redirect to thank you page
+        header("Location: thank_you.html");
+        exit();
 } else {
     echo "Error sending message.";
 }
