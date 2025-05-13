@@ -9,11 +9,15 @@
 }
 
 body {
+    font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: url(img/green.jpg) no-repeat center center fixed; /* фиксируем фоновое изображение */
-  background-size: cover; /* растягиваем фон на весь экран */
+  background: url(img/green.jpg) no-repeat center center fixed; /* fix back */
+  background-size: cover; /* wight for all screen */
   color: #333;
 }
 
@@ -165,14 +169,14 @@ body {
 }
 
 .contact-content h1 {
-  font-size: 36px;
+  font-size: 29px;
   font-family: "Space Grotesk", sans-serif;
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
 .contact-content p {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 20px;
 }
 /* Adaptive */
@@ -208,6 +212,20 @@ body {
   }
 
   .contact-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+  form label {
+    font-size: 14px;
+  }
+
+  form input, form textarea {
+    font-size: 14px;
+  }
+
+  form button {
     font-size: 14px;
   }
 }
@@ -235,7 +253,9 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
   color: #fff;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.615);
+  text-shadow:
+  1px 1px 0 rgb(35, 36, 37),
+  3px 3px 10px rgb(39, 39, 42);
   min-height: 350px;
 }
 
@@ -324,6 +344,12 @@ button:hover {
   margin-right: 8px;
   filter: invert(1); /* Apply color inversion by default */
   transition: filter 0.3s ease; /* Smooth transition for inversion */
+}
+
+.icon-shadow {
+  width: 64px;
+  height: auto;
+  filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.5));
 }
 
 .icon2 {

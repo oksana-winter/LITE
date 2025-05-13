@@ -45,8 +45,8 @@ body {
 }
 
 .main-nav a:hover {
-  color: #ffd700; /* например, золотой — выбери свой */
-  text-decoration: none; /* убираем подчёркивание, если не нужно */
+  color: #ffd700; /* golden */
+  text-decoration: none; 
 }
 
 .main-nav a {
@@ -183,7 +183,7 @@ p {
     position: absolute;
     top: 70px;
     right: 0;
-    background-color: #111;
+    background-color: #111111b9;
     width: 100%;
     transform: translateY(-200%);
     transition: transform 0.3s ease-in-out;
