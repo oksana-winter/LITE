@@ -165,7 +165,7 @@ body {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 0;
+  margin-bottom: 1px;
 }
 
 .contact-content h1 {
