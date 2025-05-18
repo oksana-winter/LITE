@@ -2,7 +2,7 @@
 
   <h1>🌍 LITE — Minimalist Travel</h1>
 
-  <p><strong>LITE</strong> is a website designed for inspired and lightweight travel planning. It offers a trip generator, travel tips, useful resources, and simple navigation.</p>
+  <p><strong>LITE</strong> is a website designed for inspired and lightweight travel planning. </p>
 
 IT Field(s): Web Development <br>
 Programs, Services & Tools Used: HTML, CSS, JavaScript, Figma, Adobe Creative Cloud, Google Fonts, API, Git, GitHub, Netlify, Formspree <br>
@@ -54,7 +54,6 @@ LITE/
       <li>🧭 <strong>Travel Guide</strong>: Tips and hacks for smart traveling.</li>
       <li>🧰 <strong>Resource Hub</strong>: Handy tools and useful links.</li>
       <li>💌 <strong>Contact Form</strong>: Send a message directly from the site.</li>
-      <li>🗺️ <strong>Route Maps</strong>: Visualizes generated travel routes.</li>
     </ul>
   </div>
 
